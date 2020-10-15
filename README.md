@@ -6,15 +6,9 @@ This code implements a deep learning tractography segmentation method (DeepWMA) 
     Deep white matter analysis (DeepWMA): fast and consistent tractography segmentation.
     Medical Image Analysis 65 (2020): 101761
 
-Please download the pre-trained CNN models and testing data: 
-
-    https://github.com/zhangfanmark/DeepWMA/releases
-
-Download `SegModels.zip` and uncompress to the current folder.
-
-Download `TestData.zip` and uncompress to the current folder.
-
 # Example
+
+See the following script for instructions:
 
 	sh run_DeepWMA.sh
 
