@@ -6,6 +6,10 @@ This code implements a deep learning tractography segmentation method (DeepWMA) 
     Deep white matter analysis (DeepWMA): fast and consistent tractography segmentation.
     Medical Image Analysis 65 (2020): 101761
 
+# Version update
+
+The tensorflow2 (2.3.0) version is in Tensorflow2 branch.
+
 # Example
 
 See the following script for instructions:
