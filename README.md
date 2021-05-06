@@ -8,7 +8,7 @@ This code implements a deep learning tractography segmentation method (DeepWMA) 
 
 # Version update
 
-The tensorflow2 (2.3.0) version is in Tensorflow2 branch.
+The Tensorflow2 (2.3.0) version is in Tensorflow2 branch.
 
 # Example
 
