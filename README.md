@@ -1,5 +1,7 @@
 # DeepWMA (Deep White Matter Analysis)
 
+Please check **Tensorflow2 branch** for updates
+
 This code implements a deep learning tractography segmentation method (DeepWMA) that allows fast and consistent white matter fiber tract identification, as described in the following paper:
 
     Fan Zhang, Suheyla Cetin Karayumak, Nico Hoffmann, Yogesh Rathi, Alexandra J. Golby, and Lauren J. O’Donnell. 
