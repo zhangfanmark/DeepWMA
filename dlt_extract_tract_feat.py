@@ -30,11 +30,9 @@ parser.add_argument(
     '-feature', action="store", type=str,
     help="Name of feature. Currently support: `RAS`")
 parser.add_argument(
-    # TODO: RNN to get rid for this.
     '-numPoints', action="store", type=int, default=15,
     help='Number of points per fiber to extract feature.')
 parser.add_argument(
-    # TODO: RNN to get rid for this.
     '-numRepeats', action="store", type=int, default=15,
     help='Number of repiteation times.')
 
