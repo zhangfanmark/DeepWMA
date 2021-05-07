@@ -92,7 +92,6 @@ def CNN_simple(x_train, y_train, x_validation, y_validation, num_classes, out_pa
     x_validation = x_validation.astype('float32')
 
     earlyStopping = EarlyStopping(monitor='val_accuracy', min_delta=0.00, patience=10, verbose=0, mode='auto')
-    # TODO: update it to github
     net_save = ModelCheckpoint('./{}/best_weights.h5'.format(out_path), save_best_only=True, monitor='val_accuracy',
                                mode='auto')
     # reduce_lr_loss = ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=7, verbose=1, epsilon=1e-4, mode='min')
