@@ -479,7 +479,7 @@ def bilateralize_feature_OLD(y_names, y_data, x_data, fliped_copy=False):
 
     # Replace y label of right structure to its corresponding left structure
     # Note: here we assume that right structure is next to the left structure
-    y_data_bilateral_ = y_data
+    y_data_bilateral_ = np.copy(y_data)
     for y_label in all_y_labels:
         if 'left' in y_names[y_label]:
             # print y_label, y_names[y_label], y_names[y_label+1]
@@ -496,7 +496,7 @@ def bilateralize_feature_OLD(y_names, y_data, x_data, fliped_copy=False):
     y_names_bilateral = np.array(y_names_bilateral)
 
     # Make bilateral x data
-    x_data_reflected = x_data
+    x_data_reflected = np.copy(x_data)
     x_data_reflected[:, :, :, 0] = -x_data_reflected[:, :, :, 0]
 
     x_data_bilateral = np.concatenate((x_data, x_data_reflected), axis=2)
@@ -681,7 +681,7 @@ def bilateralize_feature(y_data, y_names, y_validation=None, verbose=False):
 
 def bilateral_X_data(x_data, fliped_copy=False, y_data=None):
     """My understanding: make left and right fibers for the same tract undistinguished??"""
-    x_data_reflected = x_data
+    x_data_reflected = np.copy(x_data)
     x_data_reflected[:, :, :, 0] = -x_data_reflected[:, :, :, 0]
 
     if x_data_reflected.shape[-1] == 4:
