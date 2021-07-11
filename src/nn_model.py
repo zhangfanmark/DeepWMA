@@ -58,14 +58,14 @@ def CNN_simple(x_train, y_train, x_validation, y_validation, num_classes, out_pa
     model.add(Conv2D(256, (3, 3), padding='same'))
     model.add(Activation('relu'))
     model.add(Conv2D(256, (3, 3), padding='same'))
-    # model.add(Activation('relu'))
-    # model.add(MaxPooling2D(pool_size=(2, 2)))
-    #
-    # model.add(Conv2D(512, (3, 3), padding='same'))
-    # model.add(Activation('relu'))
-    # model.add(Conv2D(512, (3, 3), padding='same'))
-    # model.add(Activation('relu'))
-    # model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Conv2D(512, (3, 3), padding='same'))
+    model.add(Activation('relu'))
+    model.add(Conv2D(512, (3, 3), padding='same'))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
 
     model.add(Flatten())
     model.add(Dense(128))
