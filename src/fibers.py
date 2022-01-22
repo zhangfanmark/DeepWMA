@@ -23,8 +23,10 @@ class Fiber:
         self.hemisphere_percent_threshold = 0.95
         
     def get_equivalent_fiber(self):
-        """ Get the reverse order of current line (trajectory), as the
-        fiber can be equivalently represented in either order."""
+        """ 
+        Get the reverse order of current line (trajectory), as the
+        fiber can be equivalently represented in either order.
+        """
         
         fiber = Fiber()
 

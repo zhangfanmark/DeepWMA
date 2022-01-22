@@ -25,15 +25,14 @@ parser.add_argument(
     '-outPrefix',type=str,
     help='A prefix string of all output files.')
 
+# RAS: Right-Anterior-Superior
 parser.add_argument(
     '-feature', action="store", type=str,
     help="Name of feature. Currently support: `RAS`")
 parser.add_argument(
-    # TODO: RNN to get rid for this.
     '-numPoints', action="store", type=int, default=15,
     help='Number of points per fiber to extract feature.')
 parser.add_argument(
-    # TODO: RNN to get rid for this.
     '-numRepeats', action="store", type=int, default=15,
     help='Number of repiteation times.')
 
@@ -60,6 +59,7 @@ print(script_name, 'Reading input tractography:', args.inputVTK)
 pd_tract = wma.io.read_polydata(args.inputVTK)
 
 print(script_name, 'Computing feauture:', args.feature)
+
 if args.feature == 'RAS':
 
     feat_RAS = tract_feat.feat_RAS(pd_tract, number_of_points=args.numPoints)
@@ -121,6 +121,8 @@ elif args.feature == 'CurvTors':
     
     feat = np.reshape(feat_curv_tors, feat_shape)
 
+print(type(feat))
+
 print(script_name, 'Feature matrix shape:', feat.shape)
 
 if args.groundTruthLabel is not None:
@@ -135,6 +137,7 @@ else:
     label_values = None
     label_names = None
 
+
 ## downsampling
 if args.downsampleStep is not None:
     print(script_name, 'Downsampling the feature matrix with step size:', args.downsampleStep)
@@ -144,11 +147,13 @@ if args.downsampleStep is not None:
     print(script_name, 'Feature matrix shape (downsampled):', feat.shape)
     print(script_name, 'Label array shape (downsampled):', label_array.shape if label_array is not None else label_array)
 
+
 ## Save feat
 with h5py.File(os.path.join(args.outputDir, args.outPrefix+'_featMatrix.h5'), "w") as f:
-    f.create_dataset('feat',data=feat)
+    f.create_dataset('feat', data=feat)
 
     print(script_name, 'Feature matrix shape:', feat.shape)
+
 
 ## Save label
 if args.groundTruthLabel is not None:
