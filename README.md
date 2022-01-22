@@ -1,8 +1,5 @@
-https://github.com/zhangfanmark/DeepWMA
 
-https://github.com/tengfeixue-victor/DeepWMA/tree/Tensorflow2
-
-# DeepWMA (Deep White Matter Analysis) - Tensorflow2
+# DeepWMA (Deep White Matter Analysis)
 
 This code implements a deep learning tractography segmentation method (DeepWMA) that allows fast and consistent white matter fiber tract identification, as described in the following paper:
 
@@ -12,14 +9,17 @@ This code implements a deep learning tractography segmentation method (DeepWMA) 
 
 This version updates the code to the latest Tensorflow 2 environment.
 
-# Dependencies
-Tensorflow == 2.3.0
+# Installation
 
-Python == 3.6.13
-
-Cuda == 10.1.243
-
-Cudnn = 7.6.5
+	conda create --name DeepWMA python=3.7
+	conda activate DeepWMA
+	
+	pip install git+https://github.com/SlicerDMRI/whitematteranalysis.git
+	pip install tensorflow-gpu==2.3.0
+	pip install -U scikit-learn 
+	
+	git clone https://github.com/zhangfanmark/DeepWMA.git
+	cd DeepWMA
 
 # Example
 
