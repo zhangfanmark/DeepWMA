@@ -33,7 +33,7 @@ See the following script for instructions:
     Deep white matter analysis (DeepWMA): fast and consistent tractography segmentation.
     Medical Image Analysis 65 (2020): 101761
 
-    Fam Zhang, Ye Wu, Isaiah Norton, Yogesh Rathi, Nikos Makris and Lauren J. O’Donnell.
+    Fan Zhang, Ye Wu, Isaiah Norton, Yogesh Rathi, Nikos Makris and Lauren J. O’Donnell.
     An anatomically curated fiber clustering white matter atlas for consistent white matter tract parcellation across the lifespan.
     NeuroImage, 2018 (179): 429-447
 
